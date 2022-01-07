@@ -1,0 +1,76 @@
+﻿@page "/scoundrel"
+@using System.Text.Json.Serialization
+@using System.Text.Json
+@inject HttpClient Http
+
+<PageTitle>Weather forecast</PageTitle>
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (cards == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p>Base Deck: @string.Join(',',cards.Select(x=>x.ToString())) </p>
+    @* <table class="table">
+        <thead>
+            <tr>
+                <th>AttackType</th>
+                <th>AttackValue</th>
+                <th>Shuffle</th>
+                <th>Attack</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in cards)
+            {
+                <tr>
+                    <td>@forecast.AttackType</td>
+                    <td>@forecast.AttackValue</td>
+                    <td>@forecast.Shuffle</td>
+                    <td>@forecast</td>
+                </tr>
+            }
+        </tbody>
+    </table> *@
+}
+
+@code {
+    private AttackCard[]? cards;
+
+    protected override async Task OnInitializedAsync()
+    {
+        cards = await Http.GetFromJsonAsync<AttackCard[]>("data/attackcards/base.json",new JsonSerializerOptions {
+            Converters = { new JsonStringEnumConverter() }
+        });
+    }
+    
+    public enum AttackType {
+        Plus,
+        Minus,
+        Multiply,
+        Miss
+    }
+
+    public class AttackCard
+    {
+        public AttackType AttackType { get; set; }
+
+        public int AttackValue { get; set; }
+
+        public bool Shuffle { get; set; }
+
+        public override string ToString() => AttackType switch {
+            AttackType.Plus => $"+{AttackValue}",
+            AttackType.Minus => $"-{AttackValue}",
+            AttackType.Multiply => $"x{AttackValue}",
+            AttackType.Miss => $"Miss",
+            _ => "?"
+        };
+
+    }
+}

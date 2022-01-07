@@ -1,0 +1,97 @@
+[
+    {
+        "AttackType": "Plus",
+        "AttackValue": 2,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 1,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 1,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 1,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 1,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 1,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Minus",
+        "AttackValue": 1,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Minus",
+        "AttackValue": 1,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Minus",
+        "AttackValue": 1,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Minus",
+        "AttackValue": 1,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Minus",
+        "AttackValue": 1,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 0,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 0,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 0,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 0,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 0,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Plus",
+        "AttackValue": 0,
+        "Shuffle": false
+    },
+    {
+        "AttackType": "Multiply",
+        "AttackValue": 2,
+        "Shuffle": true
+    },
+    {
+        "AttackType": "Miss",
+        "AttackValue": 0,
+        "Shuffle": true
+    }
+]
